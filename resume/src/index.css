@@ -1,7 +1,21 @@
-body {
-  overflow-x: hidden;
+:root{
+  --background-color: white;
+  --background-secondary-color: #bdc3c7;
+  --border-color: #95a5a6;
+  --text-color: black;
+  --highlight1-color: #45f670;
+  --highlight2-color: #4cdf76;
+  --highlight3-color: #708a74;
+}
 
-  background-color: #1f1f1f1f;
+
+body {
+  overflow:hidden;
+  color: var(--text-color);
+  border-color: var(--text-color);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-color: var(--background-secondary-color);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,56 +26,59 @@ body {
   width: 100%;
 }
 .infoColumn {
-  width: 60vh;
-  height: 100%;
-  padding: 3vh 3vh 0 6vh;
-  /* background-color: #f0f0f0; */
+  width: 50vh;
+  height: 93vh;
+  padding: 3vh 2.5vh 3vh 8vh;
+  display: flex;
+  flex-direction: column;
 }
 .pageColumn {
   flex: 1;
-  height: 100%;
-  padding: 3vh 6vh 0 3vh;
+  height: 93vh;
+  padding: 3vh 8vh 3vh 2.5vh;
+  display: flex;
+  flex-direction: column;
   /* background-color: #d3d3d3; */
-}
-/*Responsive layout*/
-@media screen and (max-width: 600px) {
-  .bodyContainer{
-    flex-direction: column;
-  }
-  .infoColumn, .pageColumn {
-    width: 100%;
-    padding: 2vh 4vh;
-  }
-
 }
 
 .info-block {
-  background-color: white;
+  background-color: var(--background-color);
   height: 500px;
   flex: 1;
   text-align: center;
 
-  
-  border-radius: 20px 0 20px 0;
+  border-radius: 20px;
   padding: 20px;
+  border: 0.3vh solid var(--text-color);
 }
+
 .pageBlock{
-  background-color: white;
-  height: auto;
+  background-color: var(--background-color);
+  height: 900px;
   flex: 1;
   text-align: left;
-
-  
-  border-radius: 20px 0 20px 0;
+  overflow-y: scroll;
+  clip-path: border-box;
+  clip-path: scrollbar-thumb;
+  border-radius: 20px;
   padding: 20px;
+  border: 0.3vh solid var(--text-color);
+}
+.pageBlock::-webkit-scrollbar {
+  width: 1.5vh;
+  background: var(--text-color);
+}
+.pageBlock::-webkit-scrollbar-thumb {
+  background: var(--background-color);
+  border-radius: 1vh;
+  border: 0.3vh solid var(--text-color);
 }
 
-/* DEMO-SPECIFIC STYLES */
 .typewriter{
   display: inline-block;
   width: 0;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid rgb(49, 49, 49); /* The typwriter cursor */
+  border-right: .15em solid var(--background-color); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
@@ -82,11 +99,112 @@ body {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: rgb(49, 49, 49) }
+  50% { border-color: var(--background-secondary-color) }
 }
 .profileImage{
-  width: 30vh;
-  height: 30vh;
+  width: 40vh;
+  height: 40vh;
   border-radius: 50%;
   margin: 2vh;
+  border: 0.3vh solid var(--text-color);
+}
+
+
+/* ### NAVBAR ###*/
+.navBar{
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vh;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  border: 0.3vh solid var(--text-color);
+}
+.navButton{
+  background-color: var(--background-color);
+  border-radius: 20px;
+
+  margin:0.5vh;
+  overflow:hidden;
+  width: 5vh;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.15vh;
+  text-align: center;
+  border: 0.3vh solid var(--text-color);
+  gap: 0.6vh;
+  cursor: pointer;
+  transition: 
+    width 0.3s,
+    background-color 0.2s,
+    filter 0.2s,
+    justify-content 0.3s;
+}
+
+.navIcon{
+  width: 3.5vh;
+  height: 3.5vh;
+}
+
+.navButton.active{
+  filter: invert(100%);
+
+  justify-content: left;
+  width: 25vh;;
+  &:after{
+    content: attr(name);
+    font-weight: bolder;
+  }
+}
+
+.navButton:hover {
+  filter: invert(0%);
+  background-color: var(--highlight1-color);
+  justify-content: left;
+  width: 25vh;
+}
+
+.navButton:hover:after {
+  content: attr(name);
+  font-weight: bolder;
+}
+
+/* Any inactive navButton is hovered → affect the active one */
+.navBar:has(.navButton:hover:not(.active)) .active {
+  width: 5vh;
+  justify-content: center;
+}
+
+.navBar:has(.navButton:hover:not(.active)) .active:after {
+  content: none;
+}
+
+.iridescence-container {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Responsive layout*/
+@media screen and (max-width: 600px) {
+  .bodyContainer{
+    flex-direction: column;
+  }
+  .infoColumn, .pageColumn {
+    width: 100%;
+    padding: 2vh 4vh;
+  }
+  .pageBlock{
+    overflow-y: auto;
+  }
+  body{
+    overflow: auto;
+  }
 }

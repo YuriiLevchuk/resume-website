@@ -1,5 +1,4 @@
 import React from 'react';
-import './InfoBlock.css';
 import { useState, useEffect } from 'react';
 
 const InfoBlock: React.FC = () => {
@@ -16,7 +15,7 @@ const InfoBlock: React.FC = () => {
   return (
     <div className="info-block">
       <img className='profileImage' src={"https://avatars.githubusercontent.com/u/169728013?s=400&u=6e4ae42308483d62000849266b50133b7f6c8ebf&v=44"}/>
-      <h1>Yurii Levchuk</h1>
+      <h1>YURII LEVCHUK</h1>
       <div style={{ display: 'inline-block' }}>
         <p className="typewriter">{ text }</p>
       </div>
