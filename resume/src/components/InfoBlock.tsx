@@ -19,6 +19,16 @@ const InfoBlock: React.FC = () => {
       <div style={{ display: 'inline-block' }}>
         <p className="typewriter">{ text }</p>
       </div>
+      <div className="socialsWrapper">
+        <button className="socialsButton" title="GitHub">
+          <img className='navIcon' src=".\src\resources\icons\github.svg" /></button>
+        <button className="socialsButton" title="Linkedin">
+          <img className='navIcon' src=".\src\resources\icons\linkedin.svg" /></button>
+        <button className="socialsButton" title="Telegram">
+          <img className='navIcon' src=".\src\resources\icons\telegram.svg" /></button>
+        <button className="socialsButton" title="Download CV">
+          <img className='navIcon' src=".\src\resources\icons\download.svg" /></button>
+      </div>
     </div>
   )
 }

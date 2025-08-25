@@ -1,4 +1,5 @@
 import React from "react";
+import About from "./Pages/About";
 
 interface PageBlockProps {
   navigatedPage: number
@@ -12,7 +13,7 @@ const PageBlock:React.FC<PageBlockProps> = ( {navigatedPage} : PageBlockProps ) 
     
     switch (n) {
       case 0:
-        return <div>About</div>
+        return <About/>
       case 1:
         return <div>Resume</div>
       case 2:
@@ -25,35 +26,9 @@ const PageBlock:React.FC<PageBlockProps> = ( {navigatedPage} : PageBlockProps ) 
   }
   return (
     <div className="pageBlock">
-      {renderPage(navigatedPage)}
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-
+      <div className="contentWrapper">
+        {renderPage(navigatedPage)}
+      </div>
     </div>
   )
 }

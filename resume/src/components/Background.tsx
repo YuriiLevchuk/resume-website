@@ -52,7 +52,7 @@ interface BackgroundProps {
 }
 
 export default function Background({
-  color = [0.5, 1, 0.5],
+  color = [0.6, 1, 0.6],
   speed = 0.5,
   amplitude = 0.05,
   mouseReact = false,
