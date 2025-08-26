@@ -19,7 +19,7 @@ const About: React.FC = () => {
           <h3>
             <span>
               <a>Front-End</a>
-              <img src=".\src\resources\icons\html.svg" />
+              <img src="public\icons\html.svg" />
             </span>
           </h3>
           <ul>
@@ -32,7 +32,7 @@ const About: React.FC = () => {
         <div>
           <h3><span>
             <a>Back-End</a>
-            <img src=".\src\resources\icons\server.svg" />
+            <img src="public\icons\server.svg" />
           </span></h3>
           <ul>
             <li>Node.js</li>
@@ -43,11 +43,12 @@ const About: React.FC = () => {
         <div>
           <h3><span>
             Data Bases
-            <img src=".\src\resources\icons\database.svg" />
+            <img src="public\icons\database.svg" />
           </span></h3>
           <ul>
-            <li>Node.js</li>
-            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>PostgreSQL</li>
+            <li>Oracle</li>
             <li>MySQL</li>
           </ul>
         </div>

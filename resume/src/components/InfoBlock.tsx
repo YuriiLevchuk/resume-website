@@ -22,19 +22,19 @@ const InfoBlock: React.FC = () => {
       <div className="socialsWrapper">
         <button className="socialsButton" title="GitHub"
         onClick={() => window.open('https://github.com/YuriiLevchuk')}>
-          <img className='navIcon' src=".\src\resources\icons\github.svg" /></button>
+          <img className='navIcon' src="public\icons\github.svg" /></button>
 
         <button className="socialsButton" title="Linkedin"
         onClick={() => window.open('https://www.linkedin.com/in/yurii-levchuk/')}>
-          <img className='navIcon' src=".\src\resources\icons\linkedin.svg" /></button>
+          <img className='navIcon' src="public\icons\linkedin.svg" /></button>
 
         <button className="socialsButton" title="Telegram"
         onClick={() => window.open('https://t.me/yuriilevchuk')}>
-          <img className='navIcon' src=".\src\resources\icons\telegram.svg" /></button>
+          <img className='navIcon' src="public\icons\telegram.svg" /></button>
 
         <button className="socialsButton" title="Download CV"
         onClick={() => window.open('https://drive.google.com/file/d/1n6JftErTc_Lza8sj91LdRbZnJWjHy2_B/view?usp=sharing')}>
-          <img className='navIcon' src=".\src\resources\icons\download.svg" /></button>
+          <img className='navIcon' src="public\icons\download.svg" /></button>
       </div>
     </div>
   )
