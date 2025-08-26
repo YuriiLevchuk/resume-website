@@ -1,5 +1,9 @@
 import React from "react";
 import About from "./Pages/About";
+import Blog from "./Pages/Blog";
+import Resume from "./Pages/Resume";
+import Projects from "./Pages/Projects";
+import Contacts from "./Pages/Contacts";
 
 interface PageBlockProps {
   navigatedPage: number
@@ -15,13 +19,13 @@ const PageBlock:React.FC<PageBlockProps> = ( {navigatedPage} : PageBlockProps ) 
       case 0:
         return <About/>
       case 1:
-        return <div>Resume</div>
+        return <Resume/>
       case 2:
-        return <div>Projects</div>
+        return <Projects/>
       case 3:
-        return <div>Blog</div>
+        return <Blog/>
       case 4:
-        return <div>Contacts</div>
+        return <Contacts/>
     }
   }
   return (

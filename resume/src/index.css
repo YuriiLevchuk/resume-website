@@ -112,6 +112,7 @@ body {
   gap: 0.5vh;
   background-color: var(--background-color);
   border-radius: 20px;
+  animation-delay: 0.5s;
   border: 0.3vh solid var(--text-color);
 }
 .navButton{
@@ -211,63 +212,95 @@ body {
 
 /*### TEXT ANIMATIONS/DECORATIONS ###*/
 
-/*Shiny-text Animation*/
-.shiny-text {
-  color: #b5b5b5a4;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 60%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  display: inline-block;
-  animation: shine 5s linear infinite;
+/*Gradient-text Animation*/
+.animated-gradient-text {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  max-width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.5s ease-out;
+  overflow: hidden;
+  cursor: pointer;
 }
-
-@keyframes shine {
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 300% 100%;
+  animation: gradient linear infinite;
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+}
+.gradient-overlay::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #060010;
+  z-index: -1;
+}
+@keyframes gradient {
   0% {
-    background-position: 100%;
+    background-position: 0% 50%;
   }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
   100% {
-    background-position: -100%;
+    background-position: 0% 50%;
   }
 }
-
-.shiny-text.disabled {
-  animation: none;
+.text-content {
+  position: relative;
+  z-index: 2;
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient linear infinite;
 }
-
 /*Typewriter animation*/
 .typewriter{
   display: inline-block;
   width: 0;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid var(--background-color); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  overflow: hidden;
+  border-right: .15em solid var(--background-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
   content: "This text replaces the original.";
   animation-delay: 2s;
   animation: 
     typing 10.0s steps(20, end) infinite,
     blink-caret .5s step-end infinite;
 }
-
 @keyframes typing {
   0% { width: 0; }
   10% { width: 100%; }
   85% { width: 100%; }
   90% { width: 0px; }
 }
-
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: var(--background-secondary-color) }
 }
-
 .profileImage{
   width: 40vh;
   height: 40vh;
@@ -282,7 +315,6 @@ body {
   font-size: 7vh;
   font-weight: bolder;
   text-transform: uppercase;
-  
 }
 
 .contentWrapper span{
@@ -293,4 +325,11 @@ body {
   background: linear-gradient(-45deg, var(--highlight1-color), var(--highlight2-color), var(--highlight3-color));
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+}
+
+.contentWrapper h1{
+  border: 0;
+  border-bottom: 0.1vh;
+  border-color: var(--border-color);
+  border-style: solid;
 }
