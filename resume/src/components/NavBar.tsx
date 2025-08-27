@@ -1,22 +1,40 @@
 import React from "react"
 interface NavBarProps{
-  setNavigatedPage: React.Dispatch<React.SetStateAction<number>>;
+  navigatedPage: number,
+  setNavigatedPage: React.Dispatch<React.SetStateAction<number>>
 }
 
 
-
-const NavBar:React.FC<NavBarProps> = ( props ) => {
+const NavBar:React.FC<NavBarProps> = ( {navigatedPage, setNavigatedPage} : NavBarProps ) => {
   return (
     <div className="navBar">
-            <button className='navButton active' id="0" title="About" name='About' onClick={() => props.setNavigatedPage(0)}>
-              <img src="icons\about.svg" className='navIcon'/></button>
-            <button className='navButton' id="1" name="Resume" onClick={() => props.setNavigatedPage(1)}>
-              <img src="icons\resume.svg" className='navIcon'/></button>
-            <button className='navButton' id="2" name="Projects" onClick={() => props.setNavigatedPage(2)}>
-              <img src="icons\projects.svg" className='navIcon'/></button>
-            <button className='navButton' id="3" name="Blog" onClick={() => props.setNavigatedPage(3)}>
-              <img src="icons\blog.svg" className='navIcon'/></button>
-            <button className='navButton' id="4" name="Contacts" onClick={() => props.setNavigatedPage(4)}>
+            <button className={"navButton" + (navigatedPage === 0 ? " active" : "")}
+            id="0" title="About" name='About' 
+            onClick={() => setNavigatedPage(0)}>
+              <img src="icons\about.svg" className='navIcon'/>
+            </button>
+
+            <button className={"navButton" + (navigatedPage === 1 ? " active" : "")}
+            id="1" name="Resume" 
+            onClick={() => setNavigatedPage(1)}>
+              <img src="icons\resume.svg" className='navIcon'/>
+            </button>
+
+            <button className={"navButton" + (navigatedPage === 2 ? " active" : "")}
+            id="2" name="Projects" 
+            onClick={() => setNavigatedPage(2)}>
+              <img src="icons\projects.svg" className='navIcon'/>
+            </button>
+
+            <button className={"navButton" + (navigatedPage === 3 ? " active" : "")}
+             id="3" name="Blog" 
+             onClick={() => setNavigatedPage(3)}>
+              <img src="icons\blog.svg" className='navIcon'/>
+            </button>
+
+            <button className={"navButton" + (navigatedPage === 4 ? " active" : "")}
+            id="4" name="Contacts" 
+            onClick={() => setNavigatedPage(4)}>
               <img src="icons\contacts.svg" className='navIcon'/></button>
           </div>
   )

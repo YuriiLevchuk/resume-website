@@ -1,6 +1,9 @@
 import React from 'react'
 
-const About: React.FC = () => {
+interface AboutProps {
+  setNavigatedPage: React.Dispatch<React.SetStateAction<number>>
+}
+const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
   return (
     <div>
       <h1>A bit about me!</h1>
@@ -13,7 +16,7 @@ const About: React.FC = () => {
       </p>
       <div className="seperator"></div>
 
-      <h2>My Stack</h2>
+      <h2>My Skills</h2>
       <div className='columnWrapper'>
         <div>
           <h3>
@@ -26,6 +29,7 @@ const About: React.FC = () => {
             <li>React.js</li>
             <li>Next.js</li>
             <li>TypeScript</li>
+            <li>OpenGL</li>
             <li>Tailwind</li>
           </ul>
         </div>
@@ -38,6 +42,7 @@ const About: React.FC = () => {
             <li>Node.js</li>
             <li>Express.js</li>
             <li>Typescript</li>
+            <li>AWS</li>
           </ul>
         </div>
         <div>
@@ -52,7 +57,29 @@ const About: React.FC = () => {
             <li>MySQL</li>
           </ul>
         </div>
+        <div>
+          <h3><span>
+            Other
+            <img src="icons\database.svg" />
+          </span></h3>
+          <ul>
+            <li>Git</li>
+            <li>Figma</li>
+          </ul>
+        </div>
       </div>
+      <p>Also I love experimenting with new tools and applying them in projects like&nbsp;
+        <a 
+        onClick={() => setNavigatedPage(2)}
+        style={{cursor: 'pointer', color: 'var(--highlight2-color)', textDecoration: 'underline'}}>
+          these…
+        </a>
+      </p>
+      <div style={{marginTop: '20px'}} className="seperator"></div>
+
+      <h2>I am open for:</h2>
+      <p>Work:</p>
+      <p>Freelance:</p>
     </div>
   )
 }

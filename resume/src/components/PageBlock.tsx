@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import Resume from "./Pages/Resume";
@@ -6,18 +6,14 @@ import Projects from "./Pages/Projects";
 import Contacts from "./Pages/Contacts";
 
 interface PageBlockProps {
-  navigatedPage: number
+  navigatedPage: number,
+  setNavigatedPage: React.Dispatch<React.SetStateAction<number>>
 }
-const PageBlock:React.FC<PageBlockProps> = ( {navigatedPage} : PageBlockProps ) => {
-  const renderPage = (n: number) => {
-    document.getElementsByClassName('active')[0]?.classList.remove('active');
-
-    const activeButton = document.getElementById(n.toString());
-    activeButton?.classList.add('active')
-    
+const PageBlock: React.FC<PageBlockProps> = ( {navigatedPage, setNavigatedPage} : PageBlockProps ) => {
+  const renderPage = (n: number): ReactNode => {
     switch (n) {
       case 0:
-        return <About/>
+        return <About setNavigatedPage={setNavigatedPage}/>
       case 1:
         return <Resume/>
       case 2:
@@ -28,6 +24,7 @@ const PageBlock:React.FC<PageBlockProps> = ( {navigatedPage} : PageBlockProps ) 
         return <Contacts/>
     }
   }
+
   return (
     <div className="pageBlock">
       <div className="contentWrapper">

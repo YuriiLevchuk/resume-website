@@ -14,10 +14,10 @@ const App = () => {
       <div className="bodyContainer">
         <div className='infoColumn'>
           <InfoBlock/>
-          <NavBar setNavigatedPage={setNavigatedPage}/>
+          <NavBar navigatedPage={navigatedPage} setNavigatedPage={setNavigatedPage}/>
         </div>
         <div className='pageColumn'>
-          <PageBlock navigatedPage={navigatedPage}/>
+          <PageBlock navigatedPage={navigatedPage} setNavigatedPage={setNavigatedPage}/>
         </div>
       </div>
       
