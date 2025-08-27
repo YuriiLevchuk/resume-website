@@ -20,19 +20,19 @@ const InfoBlock: React.FC = () => {
         <p className="typewriter">{ text }</p>
       </div>
       <div className="socialsWrapper">
-        <button className="socialsButton" title="GitHub"
+        <button className="socialsButton button" title="GitHub"
         onClick={() => window.open('https://github.com/YuriiLevchuk')}>
           <img className='navIcon' src="icons\github.svg" /></button>
 
-        <button className="socialsButton" title="Linkedin"
+        <button className="socialsButton button" title="Linkedin"
         onClick={() => window.open('https://www.linkedin.com/in/yurii-levchuk/')}>
           <img className='navIcon' src="icons\linkedin.svg" /></button>
 
-        <button className="socialsButton" title="Telegram"
+        <button className="socialsButton button" title="Telegram"
         onClick={() => window.open('https://t.me/yuriilevchuk')}>
           <img className='navIcon' src="icons\telegram.svg" /></button>
 
-        <button className="socialsButton" title="Download CV"
+        <button className="socialsButton button" title="Download CV"
         onClick={() => window.open('https://drive.google.com/file/d/1n6JftErTc_Lza8sj91LdRbZnJWjHy2_B/view?usp=sharing')}>
           <img className='navIcon' src="icons\download.svg" /></button>
       </div>

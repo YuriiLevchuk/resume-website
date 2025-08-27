@@ -59,8 +59,7 @@ body {
   gap: 1vh;
 }
 .socialsButton{
-  background-color: var(--background-color);
-  border-radius: 20px;
+  
 
   overflow:hidden;
   flex:1;
@@ -69,11 +68,9 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 0.15vh;
-  text-align: center;
-  border: 0.3vh solid var(--text-color);
+  
   gap: 0.6vh;
-  cursor: pointer;
-
+  
   transition: background-color 0.2s;
 }
 .socialsButton:hover{
@@ -373,7 +370,37 @@ body {
   margin-bottom: 2vh;
 }
 
-/*Responsive layout*/
+.contentWrapper .button{
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.button {
+  background-color: var(--background-color);
+  border-radius: 20px;
+  border: 0.3vh solid var(--text-color);
+  cursor: pointer;
+  text-align: center;
+
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.06); 
+  
+  transition: all 0.25s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 12px rgba(0, 0, 0, 0.12),
+    0 4px 6px rgba(0, 0, 0, 0.10);
+}
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ### RESPONSIVE LAYOUT ### */
 @media screen and (max-width: 600px) {
   body{
     overflow: auto;

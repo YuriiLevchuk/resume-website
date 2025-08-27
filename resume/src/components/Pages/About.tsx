@@ -64,8 +64,8 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
             <img src="icons\cloud.svg" />
           </span></h3>
           <ul>
-            <li>Docker</li>
             <li>AWS</li>
+            <li>GSP</li>
           </ul>
         </div>
 
@@ -77,6 +77,7 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
           <ul>
             <li>Git</li>
             <li>Figma</li>
+            <li>Docker</li>
           </ul>
         </div>
       </div>
@@ -89,9 +90,13 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
       </p>
       <div style={{marginTop: '20px'}} className="seperator"></div>
 
-      <h2>I am open for:</h2>
-      <p>Work:</p>
-      <p>Freelance:</p>
+      <h2>Interested?</h2>
+      <p>I am open for work, collaborations and freelance projects!</p>
+      <p>Check out my resume and projects! Feel free to get in touch.</p>
+      <button className="button"
+      onClick={() => setNavigatedPage(4)}>
+        Contacts
+      </button>
     </div>
   )
 }
