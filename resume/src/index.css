@@ -193,23 +193,6 @@ body {
   height: 100%;
 }
 
-/*Responsive layout*/
-@media screen and (max-width: 600px) {
-  .bodyContainer{
-    flex-direction: column;
-  }
-  .infoColumn, .pageColumn {
-    width: 100%;
-    padding: 2vh 4vh;
-  }
-  .pageBlock{
-    overflow-y: auto;
-  }
-  body{
-    overflow: auto;
-  }
-}
-
 /*### TEXT ANIMATIONS/DECORATIONS ###*/
 
 /*Gradient-text Animation*/
@@ -369,7 +352,8 @@ body {
   margin-right: 5px; /* fixes right border not rendering bug */
   div{
     
-    min-width: 120px;  
+    min-width: 120px;
+    max-width: 50%;  
     padding: 0 2vh;
     flex:1;
 
@@ -387,4 +371,32 @@ body {
   border-style: solid;
   margin-top: 0;
   margin-bottom: 2vh;
+}
+
+/*Responsive layout*/
+@media screen and (max-width: 600px) {
+  body{
+    overflow: auto;
+  }
+  .bodyContainer{
+    flex-direction: column;
+  }
+  .infoColumn, .pageColumn {
+    width: 100%;
+    padding: 2vh 4vh;
+  }
+  .pageBlock{
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+  
+  .contentWrapper .columnWrapper{
+    flex-direction: column;
+    border: 0;
+    div{
+      margin-bottom: 15px;
+      min-width: 100%;
+      border: 0;
+    }
+  }
 }

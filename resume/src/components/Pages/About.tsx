@@ -19,12 +19,10 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
       <h2>My Skills</h2>
       <div className='columnWrapper'>
         <div>
-          <h3>
-            <span>
-              <a>Front-End</a>
-              <img src="icons\html.svg" />
-            </span>
-          </h3>
+          <h3><span>
+            <a>Front-End</a>
+            <img src="icons\html.svg" />
+          </span></h3>
           <ul>
             <li>React.js</li>
             <li>Next.js</li>
@@ -33,6 +31,7 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
             <li>Tailwind</li>
           </ul>
         </div>
+        
         <div>
           <h3><span>
             <a>Back-End</a>
@@ -45,9 +44,10 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
             <li>AWS</li>
           </ul>
         </div>
+
         <div>
           <h3><span>
-            Data Bases
+            Databases
             <img src="icons\database.svg" />
           </span></h3>
           <ul>
@@ -57,10 +57,22 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
             <li>MySQL</li>
           </ul>
         </div>
+
+        <div>
+          <h3><span>
+            Cloud
+            <img src="icons\cloud.svg" />
+          </span></h3>
+          <ul>
+            <li>Docker</li>
+            <li>AWS</li>
+          </ul>
+        </div>
+
         <div>
           <h3><span>
             Other
-            <img src="icons\database.svg" />
+            <img src="icons\code.svg" />
           </span></h3>
           <ul>
             <li>Git</li>
