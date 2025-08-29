@@ -4,7 +4,7 @@ import ContactForm from "../ContactForm";
 const Contacts: React.FC = () => {
   return <div>
     <h1>Lets get in touch!</h1>
-    <h2>I speak <span>English, Ukrainian, Polish and Russian.</span> Feel free to contact me!</h2>
+    <h2>I speak English, Ukrainian, Polish and Russian. Feel free to contact me!</h2>
     
     <div className="columnWrapper">
       <div>

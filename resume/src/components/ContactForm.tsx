@@ -22,7 +22,11 @@ const ContactForm = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      console.log("Success", res);
+      (e.currentTarget as HTMLFormElement).reset();
+      alert("Message sent successfully!");
+      
+    } else {
+        alert(res.message);
     }
   };
 
