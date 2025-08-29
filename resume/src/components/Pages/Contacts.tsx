@@ -30,7 +30,7 @@ const Contacts: React.FC = () => {
       </div>
     </div>
 
-    <div className="seperator"></div>
+    <div className="seperator" style={{marginTop: "30px"}}></div>
     <h2>Write me a message</h2>
     <ContactForm/>
   </div>;
