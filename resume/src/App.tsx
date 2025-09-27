@@ -1,28 +1,21 @@
-import { useState } from 'react';
-
 import Background from './components/Background';
-import InfoBlock from './components/InfoBlock';
-import PageBlock from './components/PageBlock';
-import NavBar from './components/NavBar';
+import InfoBlock from './components/InfoBlocks/ProfileBlock';
+import ProfileBlock from './components/InfoBlocks/PageBlock';
+import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
-  const [navigatedPage, setNavigatedPage] = useState(0);
-  
   return (
     <>
-      <Background/>
+      <Background/> 
       <div className="bodyContainer">
-        <div className='infoColumn'>
+        <div className='profieColumnWrapper'>
           <InfoBlock/>
-          <NavBar navigatedPage={navigatedPage} setNavigatedPage={setNavigatedPage}/>
-        </div>
-        <div className='pageColumn'>
-          <PageBlock navigatedPage={navigatedPage} setNavigatedPage={setNavigatedPage}/>
+          <NavBar/>
+        </div>  
+        <div className='pageColumnWrapper'>
+          <ProfileBlock/>
         </div>
       </div>
-      
-      
-      
     </>
   )
 }

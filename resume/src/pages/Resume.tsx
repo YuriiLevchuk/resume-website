@@ -1,6 +1,6 @@
 import type React from "react";
-import Employment from "./Articles/Employment";
-import Study from "./Articles/Study";
+import Employment from "./articles/Employment";
+import Study from "./articles/Study";
 
 const Resume: React.FC = () => {
   return <div>

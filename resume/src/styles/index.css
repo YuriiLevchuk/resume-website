@@ -1,13 +1,4 @@
-:root{
-  --background-color: white;
-  --background-secondary-color: #bdc3c7;
-  --border-color: #95a5a6;
-  --text-color: black;
-  --highlight1-color: #45f670;
-  --highlight2-color: #549598;
-  --highlight3-color: #708a74;
-}
-
+@import "./variables.css";
 
 body {
   overflow:hidden;
@@ -20,155 +11,10 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
-
 .bodyContainer{
   display: flex;
   width: 100%;
 }
-.infoColumn {
-  width: 50vh;
-  height: 93vh;
-  padding: 3vh 2.5vh 3vh 8vh;
-  display: flex;
-  flex-direction: column;
-}
-.pageColumn {
-  flex: 1;
-  height: 93vh;
-  padding: 3vh 8vh 3vh 2.5vh;
-  display: flex;
-  flex-direction: column;
-  /* background-color: #d3d3d3; */
-}
-
-.info-block {
-  background-color: var(--background-color);
-  height: 500px;
-  flex: 1;
-  text-align: center;
-
-  border-radius: 20px;
-  padding: 20px;
-  border: 0.3vh solid var(--text-color);
-}
-.socialsWrapper{
-  margin-top: 6vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1vh;
-}
-.socialsButton{
-  
-
-  overflow:hidden;
-  flex:1;
-  height: 8vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 0.15vh;
-  
-  gap: 0.6vh;
-  
-  transition: background-color 0.2s;
-}
-.socialsButton:hover{
-  background-color: var(--highlight1-color);
-}
-
-.pageBlock{
-  background-color: var(--background-color);
-  height: 900px;
-  flex: 1;
-  text-align: left;
-  overflow-y: scroll;
-  clip-path: border-box;
-  clip-path: scrollbar-thumb;
-  border-radius: 20px;
-  padding: 20px;
-  border: 0.3vh solid var(--text-color);
-}
-.pageBlock::-webkit-scrollbar {
-  width: 1.5vh;
-  background: var(--text-color);
-}
-.pageBlock::-webkit-scrollbar-thumb {
-  background: var(--background-color);
-  border-radius: 1vh;
-  border: 0.3vh solid var(--text-color);
-}
-
-/*### NAVBAR ###*/
-.navBar{
-  margin-top: 2vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5vh;
-  background-color: var(--background-color);
-  border-radius: 20px;
-  animation-delay: 0.5s;
-  border: 0.3vh solid var(--text-color);
-}
-.navButton{
-  background-color: var(--background-color);
-  border-radius: 20px;
-
-  margin:0.5vh;
-  overflow:hidden;
-  width: 5vh;
-  height: 5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 0.15vh;
-  text-align: center;
-  border: 0.3vh solid var(--text-color);
-  gap: 0.6vh;
-  cursor: pointer;
-  transition: 
-    width 0.3s,
-    background-color 0.2s,
-    filter 0.2s,
-    justify-content 0.2s;
-}
-.navIcon{
-  width: 3.5vh;
-  height: 3.5vh;
-}
-.navButton.active{
-  filter: invert(100%);
-
-  justify-content: left;
-  width: 25vh;;
-  &:after{
-    content: attr(name);
-    font-weight: bolder;
-  }
-}
-.navButton:hover {
-  filter: invert(0%);
-  background-color: var(--highlight1-color);
-  justify-content: left;
-  width: 25vh;
-}
-
-.navButton:hover:after {
-  content: attr(name);
-  font-weight: bolder;
-}
-
-.navBar:has(.navButton:hover:not(.active)) .active {
-  width: 5vh;
-  justify-content: center;
-}
-
-.navBar:has(.navButton:hover:not(.active)) .active:after {
-  content: none;
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -179,6 +25,20 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+.profieColumnWrapper {
+  width: 50vh;
+  height: 93vh;
+  padding: 3vh 2.5vh 3vh 8vh;
+  display: flex;
+  flex-direction: column;
+}
+.pageColumnWrapper {
+  flex: 1;
+  height: 93vh;
+  padding: 3vh 8vh 3vh 2.5vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .iridescence-container {
@@ -280,13 +140,6 @@ body {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: var(--background-secondary-color) }
-}
-.profileImage{
-  width: 40vh;
-  height: 40vh;
-  border-radius: 50%;
-  margin: 2vh;
-  border: 0.3vh solid var(--text-color);
 }
 
 /*Text Highlight*/

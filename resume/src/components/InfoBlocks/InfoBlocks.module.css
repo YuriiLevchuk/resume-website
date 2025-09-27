@@ -1,0 +1,67 @@
+@import "../../styles/variables.css";
+
+.profileBlock {
+  background-color: var(--background-color);
+  height: 500px;
+  flex: 1;
+  text-align: center;
+
+  border-radius: 20px;
+  padding: 20px;
+  border: 0.3vh solid var(--text-color);
+}
+.profileImage{
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  margin: 2vh;
+  border: 0.3vh solid var(--text-color);
+}
+.socialsWrapper{
+  margin-top: 6vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1vh;
+}
+.socialsButton{
+  overflow:hidden;
+  flex:1;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.15vh;
+  gap: 0.6vh;
+  transition: background-color 0.2s;
+}
+.socialsButton:hover{
+  background-color: var(--highlight1-color);
+}
+.socialsButton img{
+  width: 30px;
+  height: 30px;
+}
+
+/*page block*/
+.pageBlock{
+  background-color: var(--background-color);
+  height: 900px;
+  flex: 1;
+  text-align: left;
+  overflow-y: scroll;
+  clip-path: border-box;
+  clip-path: scrollbar-thumb;
+  border-radius: 20px;
+  padding: 20px;
+  border: 0.3vh solid var(--text-color);
+}
+.pageBlock::-webkit-scrollbar {
+  width: 1.5vh;
+  background: var(--text-color);
+}
+.pageBlock::-webkit-scrollbar-thumb {
+  background: var(--background-color);
+  border-radius: 1vh;
+  border: 0.3vh solid var(--text-color);
+}

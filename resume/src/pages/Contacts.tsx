@@ -1,5 +1,5 @@
 import type React from "react";
-import ContactForm from "../ContactForm";
+import ContactForm from "../components/ContactForm";
 
 const Contacts: React.FC = () => {
   return <div>
