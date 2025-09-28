@@ -1,0 +1,18 @@
+@import "../../../styles/variables.css";
+
+.Title{
+  margin: 0;
+}
+.Company{
+  margin: 0;
+  color: var(--highlight3-color) !important;
+ ;
+}
+.Date{
+  margin-bottom: 5px;
+  color: var(--highlight3-color) !important;
+}
+.Description{
+  margin-left: 10px;
+  margin-bottom: 15px;
+}

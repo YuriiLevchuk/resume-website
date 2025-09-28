@@ -1,0 +1,13 @@
+@import "../../../styles/variables.css";
+
+.Degree{
+  margin: 0;
+}
+.Date{
+  margin: 0;
+  color: var(--highlight3-color) !important;
+}
+.School{
+  margin: 0px;
+  margin-bottom: 15px;
+}

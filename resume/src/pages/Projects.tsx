@@ -1,5 +1,5 @@
 import type React from "react";
-import ProjectWidget from "./articles/ProjectWidget";
+import ProjectWidget from "../components/articles/ProjectWidget";
 
 const Projects: React.FC = () => {
   return <div>
