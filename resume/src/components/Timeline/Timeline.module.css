@@ -1,0 +1,41 @@
+@import "../../styles/variables.css";
+
+.TimelineWrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.TimelineContent{
+  flex: 1;
+}
+
+.Timeline{
+  width: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.Timeline .Arrow{
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid black;
+}
+.Timeline .Point{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+.Timeline .Line{
+  width: 5px;
+  flex: 1;
+  background-color: black;
+}
+.TimelineWrapper:last-of-type .Line{
+  border-radius: 0px 0px 5px 5px;
+}

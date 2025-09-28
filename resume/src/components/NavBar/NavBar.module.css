@@ -1,5 +1,4 @@
 .navBar{
-  margin-top: 2vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,6 +40,7 @@
   transition: 
     width 0.3s,
     background-color 0.2s,
+    border-color 0.2s,
     filter 0.2s,
     justify-content 0.3s;
 }
@@ -52,6 +52,7 @@
 /*on hover*/
 .navButton:hover {
   filter: invert(0%);
+  border-color: black;
   background-color: var(--highlight1-color);
   width: 25vh;
 }
@@ -63,7 +64,7 @@
 /*if active*/
 :global( .active ){
   filter: invert(100%);
-
+  border-color: white;
   width: 25vh;
   &:after{
     content: attr(title);
@@ -72,6 +73,7 @@
 }
 .navBar:has(.navButton:hover:not(:global(.active))) :global(.active) {
   width: 34px;
+  border-color: black;
 }
 .navBar:has(.navButton:hover:not(:global(.active))) :global(.active):after {
   content: none;

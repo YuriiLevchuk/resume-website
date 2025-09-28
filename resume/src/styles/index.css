@@ -27,16 +27,18 @@ body {
   }
 }
 .profieColumnWrapper {
-  width: 50vh;
+  width: 22%;
+  min-width: 300px;
+  gap: 10px;
   height: 93vh;
-  padding: 3vh 2.5vh 3vh 8vh;
+  padding: 20px 15px 30px 50px;
   display: flex;
   flex-direction: column;
 }
 .pageColumnWrapper {
   flex: 1;
   height: 93vh;
-  padding: 3vh 8vh 3vh 2.5vh;
+  padding: 20px 50px 30px 15px;
   display: flex;
   flex-direction: column;
 }
@@ -349,14 +351,17 @@ body {
   }
   .bodyContainer{
     flex-direction: column;
+    width: 90%;
+    gap: 10px;
+    padding: 10px 20px;
   }
-  .infoColumn, .pageColumn {
+  .profieColumnWrapper, .pageColumnWrapper {
     width: 100%;
-    padding: 2vh 4vh;
+    padding: 0px;
   }
   .pageBlock{
-    overflow-y: auto;
-    overflow-x: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
   
   .contentWrapper .columnWrapper{
