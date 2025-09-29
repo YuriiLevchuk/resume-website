@@ -30,7 +30,7 @@ body {
   width: 22%;
   min-width: 300px;
   gap: 10px;
-  height: 93vh;
+  
   padding: 20px 15px 30px 50px;
   display: flex;
   flex-direction: column;
@@ -191,29 +191,6 @@ body {
 .contentWrapper ul{
   color: var(--text-color);
   margin-top: 0;
-}
-
-.contentWrapper .columnWrapper{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  
-  border-left: 0.2vh solid var(--border-color);
-  margin-right: 5px; /* fixes right border not rendering bug */
-  div{
-    
-    min-width: 120px;
-    max-width: 50%;  
-    padding: 0 2vh;
-    flex:1;
-
-    border-color: var(--border-color);
-    border-style: solid;
-    border: 0;
-    border-right: 0.2vh solid var(--border-color);
-  }
 }
 
 .contentWrapper .seperator{

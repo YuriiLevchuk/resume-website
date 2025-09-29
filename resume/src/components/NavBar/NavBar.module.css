@@ -78,3 +78,16 @@
 .navBar:has(.navButton:hover:not(:global(.active))) :global(.active):after {
   content: none;
 }
+
+@media (max-width: 600px) {
+  .navBar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: none;
+
+    border-radius: 0px 0px 5px 5px;
+    z-index: 1000;
+  }
+}
