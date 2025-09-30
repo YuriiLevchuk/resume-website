@@ -1,5 +1,6 @@
 import React from 'react'
 import Columns from '../components/Columns/Columns'
+import { useNavigate } from 'react-router-dom'
 
 const skillsColumn = [
   <div>
@@ -66,10 +67,8 @@ const skillsColumn = [
   </div>
 ]
 
-interface AboutProps {
-  setNavigatedPage: React.Dispatch<React.SetStateAction<number>>
-}
-const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
+const About:React.FC = (  ) => {
+  const navigate = useNavigate();
   return (
     <div>
       <h1>A bit about me!</h1>
@@ -87,7 +86,7 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
       <p>Also I love experimenting with new tools and applying them in projects like&nbsp;
 
         <a 
-        onClick={() => setNavigatedPage(2)}
+        onClick={() => navigate("/projects")}
         style={{cursor: 'pointer', color: 'var(--highlight2-color)', textDecoration: 'underline'}}>
           these…
         </a>
@@ -98,7 +97,7 @@ const About:React.FC<AboutProps> = ( {setNavigatedPage} : AboutProps ) => {
       <p>I am open for work, collaborations and freelance projects!</p>
       <p>Check out my resume and projects! Feel free to get in touch.</p>
       <button className="button"
-      onClick={() => setNavigatedPage(4)}>
+      onClick={() => navigate("/contacts")}>
         Contacts
       </button>
     </div>
