@@ -14,7 +14,7 @@ const PageBlock: React.FC = ( ) => {
     <div className={styles.pageBlock}>
       <div className="contentWrapper">
         <Routes>
-          <Route path="/about" element={<About setNavigatedPage={() => {}}/>}/>
+          <Route path="/about" element={<About/>}/>
           <Route path="/resume" element={<Resume/>}/>
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/blog" element={<Blog/>}/>
