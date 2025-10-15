@@ -19,7 +19,7 @@ const Contacts: React.FC = () => {
           Email
           <img src="icons\contacts.svg" />
         </span></h3>
-        <p>yurii.levchuk04@gmail.com</p>
+        <p>yra.levchuk@gmail.com</p>
       </div>
       <div>
         <h3><span>
